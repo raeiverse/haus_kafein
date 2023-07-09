@@ -24,13 +24,11 @@ class todays_Card extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 4 / 2,
-                // color: neutral_100.withOpacity(0.6),
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
                       color: neutral_100.withOpacity(0.6),
                       blurRadius: 7,
-                      // changes position of shadow
                     ),
                   ],
                 ),
@@ -62,13 +60,13 @@ class todays_Card extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 8),
-                      Text(
-                        'Cafe bergaya modern industrial di kawasan Batu, mempertemukan modernitas dengan alam. Selain kopi, cafe ini juga menyediakan tanaman hias dan pemandangan yang indah',
-                        style: textstyle_Body_Regular.copyWith(
-                          color: neutral_10,
+                      Expanded(
+                        child: Text(
+                          'Cafe bergaya modern industrial di kawasan Batu, mempertemukan modernitas dengan alam. Selain kopi, cafe ini juga menyediakan tanaman hias dan pemandangan yang indah',
+                          style: textstyle_Body_Regular.copyWith(
+                            color: neutral_10,
+                          ),
                         ),
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
                       ),
                     ],
                   ),

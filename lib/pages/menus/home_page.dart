@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haus_kafein/pages/widgets/news_card.dart';
 import 'package:haus_kafein/pages/widgets/todays_card.dart';
 import 'package:haus_kafein/pages/widgets/upcoming_card.dart';
 import 'package:haus_kafein/theme.dart';
@@ -159,6 +160,58 @@ class home_Page extends StatelessWidget {
                         upcoming_Event_Card(),
                       ],
                     ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // NEWS AND LIST SLIDESHOW ===>
+          Container(
+            margin: EdgeInsets.only(top: margin_Cards_Vertical),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: margin_Screen_Horizontal),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Upcoming Event",
+                        style: textstyle_Title_CLash_L.copyWith(
+                          color: neutral_100,
+                        ),
+                      ),
+                      SizedBox(width: 4),
+                      Row(
+                        children: [
+                          Text(
+                            "see more",
+                            style: textstyle_Body_Regular.copyWith(
+                              color: primary_Main,
+                            ),
+                          ),
+                          SizedBox(width: 2),
+                          Image.asset(
+                            'assets/icons/icons_arrow_right.png',
+                            width: 20,
+                            height: 20,
+                            color: primary_Main,
+                            fit: BoxFit.contain,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: margin_Cards_Vertical),
+                Container(
+                  margin: EdgeInsets.symmetric(
+                      horizontal: margin_Screen_Horizontal),
+                  child: Column(
+                    children: [
+                      news_Card(),
+                    ],
                   ),
                 ),
               ],

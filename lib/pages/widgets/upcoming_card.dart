@@ -20,10 +20,43 @@ class upcoming_Event_Card extends StatelessWidget {
               height: MediaQuery.of(context).size.height,
               fit: BoxFit.cover,
             ),
-            Container(),
+            Container(
+              margin: EdgeInsets.symmetric(
+                vertical: padding_Items_Vertical,
+                horizontal: padding_Items_Horizontal,
+              ),
+              width: MediaQuery.of(context).size.width / 1.77 / 7,
+              height: MediaQuery.of(context).size.height / 6 / 3,
+              decoration: BoxDecoration(
+                color: primary_Main.withOpacity(0.6),
+                borderRadius: BorderRadius.circular(borderRadius_Card),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    '13',
+                    style: textstyle_Caption_Medium.copyWith(
+                      color: neutral_10,
+                    ),
+                  ),
+                  Text(
+                    'December'.substring(0, 3),
+                    style: textstyle_Caption_Medium.copyWith(
+                      color: neutral_10,
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: padding_Items_Horizontal,
+                  vertical: padding_Items_Vertical,
+                ),
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 6 / 2.25,
                 decoration: BoxDecoration(
@@ -31,7 +64,28 @@ class upcoming_Event_Card extends StatelessWidget {
                     BoxShadow(
                       color: neutral_100.withOpacity(0.6),
                       blurRadius: 7,
-                      // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Ngopi Bareng Kopi Sore',
+                      style: textstyle_Headline_Head.copyWith(
+                        color: neutral_10,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    SizedBox(height: 4),
+                    Expanded(
+                      child: Text(
+                        'Cafe bergaya modern industrial di kawasan Batu, mempertemukan modernitas dengan alam. Selain kopi, cafe ini juga menyediakan tanaman hias dan pemandangan yang indah',
+                        style: textstyle_Body_Regular.copyWith(
+                          color: neutral_10,
+                        ),
+                      ),
                     ),
                   ],
                 ),
