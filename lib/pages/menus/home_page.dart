@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:haus_kafein/pages/widgets/todays_card.dart';
+import 'package:haus_kafein/pages/widgets/upcoming_card.dart';
 import 'package:haus_kafein/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -149,33 +150,15 @@ class home_Page extends StatelessWidget {
                 SizedBox(height: margin_Cards_Vertical),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Text(
-                        "Upcoming Event",
-                        style: textstyle_Title_CLash_L.copyWith(
-                          color: neutral_100,
-                        ),
-                      ),
-                      Text(
-                        "Upcoming Event",
-                        style: textstyle_Title_CLash_L.copyWith(
-                          color: neutral_100,
-                        ),
-                      ),
-                      Text(
-                        "Upcoming Event",
-                        style: textstyle_Title_CLash_L.copyWith(
-                          color: neutral_100,
-                        ),
-                      ),
-                      Text(
-                        "Upcoming Event",
-                        style: textstyle_Title_CLash_L.copyWith(
-                          color: neutral_100,
-                        ),
-                      ),
-                    ],
+                  child: Container(
+                    margin: EdgeInsets.only(right: margin_Screen_Horizontal),
+                    // height: MediaQuery.of(context).size.height / 6,
+                    child: Row(
+                      children: [
+                        upcoming_Event_Card(),
+                        upcoming_Event_Card(),
+                      ],
+                    ),
                   ),
                 ),
               ],
