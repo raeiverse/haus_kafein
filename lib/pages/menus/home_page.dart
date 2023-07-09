@@ -177,7 +177,7 @@ class home_Page extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Upcoming Event",
+                        "News",
                         style: textstyle_Title_CLash_L.copyWith(
                           color: neutral_100,
                         ),
@@ -214,11 +214,70 @@ class home_Page extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 5 * margin_Screen_Vertical),
               ],
             ),
           ),
         ],
       ),
+      floatingActionButton: Container(
+        height: MediaQuery.of(context).size.height / 22,
+        width: MediaQuery.of(context).size.width / 2,
+        decoration: BoxDecoration(
+          color: transparant_Colors,
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(padding_Items_Horizontal / 3),
+          child: Stack(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    transform: Matrix4.translationValues(5, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(borderRadius_Button),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height,
+                        width: MediaQuery.of(context).size.width / 2.25 / 2,
+                        color: primary_Main,
+                        child: Center(
+                          child: Text(
+                            'For you',
+                            style: textstyle_Headline_Sub.copyWith(
+                              color: neutral_10,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    transform: Matrix4.translationValues(-5, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(borderRadius_Button),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height,
+                        width: MediaQuery.of(context).size.width / 2.25 / 2,
+                        color: transparant_Colors,
+                        child: Center(
+                          child: Text(
+                            'Search',
+                            style: textstyle_Headline_Sub.copyWith(
+                              color: neutral_100,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

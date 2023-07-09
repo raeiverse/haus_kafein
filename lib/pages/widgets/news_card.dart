@@ -11,8 +11,15 @@ class news_Card extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 8.5,
       decoration: BoxDecoration(
-        color: primary_Main.withOpacity(0.5),
+        color: neutral_10,
         borderRadius: BorderRadius.circular(borderRadius_Card),
+        boxShadow: [
+          BoxShadow(
+            color: neutral_100.withOpacity(0.15),
+            offset: Offset(0, 5),
+            blurRadius: 15,
+          ),
+        ],
       ),
       child: Row(
         children: [
@@ -31,34 +38,40 @@ class news_Card extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.all(padding_Items_Horizontal),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Harga Kopi Melambung Tinggi',
-                  style: textstyle_Body_Medium.copyWith(
-                    color: neutral_100,
+            child: Container(
+              width: MediaQuery.of(context).size.width / 1.14 / 1.6,
+              height: MediaQuery.of(context).size.height,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Harga Kopi Melambung Tinggi',
+                    style: textstyle_Body_Medium.copyWith(
+                      color: neutral_100,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  'Wakil Ketua Asosiasi Eksportir & Industri Kopi Indonesia (AEKI) Pranoto Soenarto menyayangkan aksi spekulan memanfaatkan lonjakan harga kopi. Pasalnya, kecurangan itu akan merugikan petani kopi yang baru saja menikmati kenaikan harga.',
-                  style: textstyle_Caption_Regular.copyWith(
-                    color: neutral_100,
+                  SizedBox(height: 4),
+                  Text(
+                    'Wakil Ketua Asosiasi Eksportir & Industri Kopi Indonesia (AEKI) Pranoto Soenarto menyayangkan aksi spekulan memanfaatkan lonjakan harga kopi. Pasalnya, kecurangan itu akan merugikan petani kopi yang baru saja menikmati kenaikan harga.',
+                    style: textstyle_Caption_Regular.copyWith(
+                      color: neutral_100,
+                    ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  '13 January 2022',
-                  style: textstyle_Caption_Regular.copyWith(
-                    color: neutral_60,
+                  Spacer(),
+                  Text(
+                    '13 January 2022',
+                    style: textstyle_Caption_Regular.copyWith(
+                      color: neutral_60,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],

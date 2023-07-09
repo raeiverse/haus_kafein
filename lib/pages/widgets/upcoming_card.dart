@@ -10,15 +10,18 @@ class upcoming_Event_Card extends StatelessWidget {
       margin: EdgeInsets.only(left: margin_Screen_Horizontal),
       width: MediaQuery.of(context).size.width / 1.77,
       height: MediaQuery.of(context).size.height / 6,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRadius_Card),
+      child: Padding(
+        padding: EdgeInsets.all(padding_Items_Vertical),
         child: Stack(
           children: [
-            Image.asset(
-              'assets/images/images_event_1.png',
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              fit: BoxFit.cover,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(borderRadius_Card),
+              child: Image.asset(
+                'assets/images/images_event_1.png',
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                fit: BoxFit.cover,
+              ),
             ),
             Container(
               margin: EdgeInsets.symmetric(

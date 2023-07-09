@@ -38,6 +38,7 @@ Color main_Surface = Color.alphaBlend(Color(0x33FFFFFF), Color(0xffFEEDD6));
 
 Color primary_Main = Color(0xffFF5301);
 Color background_Colors = Color(0xffFFFFFF);
+Color transparant_Colors = Colors.transparent;
 
 // TEXTSTYLES ===>
 TextStyle textstyle_Title_CLash_Splash = TextStyle(
