@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:haus_kafein/pages/widgets/todays_card.dart';
 import 'package:haus_kafein/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class home_Page extends StatelessWidget {
-  final List<String> imgList = [
-    'assets/images/images_place_1.png',
-    'assets/images/images_place_2.png',
-    'assets/images/images_review_1.png',
+  // LIST IMAGES DATA ===>
+  final List<Widget> imgList = [
+    todays_Card(),
+    todays_Card(),
+    todays_Card(),
   ];
   home_Page({super.key});
 
@@ -62,13 +64,13 @@ class home_Page extends StatelessWidget {
               ],
             ),
           ),
+          // TODAYS AND CAROUSELS SLIDESHOW ===>
           Container(
             margin: EdgeInsets.only(
               top: margin_Cards_Vertical,
             ),
             child: Column(
               children: [
-                // TODAYS AND CAROUSELS SLIDESHOW ===>
                 Padding(
                   padding: EdgeInsets.only(left: margin_Screen_Horizontal),
                   child: Row(
@@ -89,28 +91,91 @@ class home_Page extends StatelessWidget {
                 ),
                 SizedBox(height: margin_Cards_Vertical),
                 Container(
-                  // width: 253,
-                  height: 350,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 2.4,
                   child: CarouselSlider(
                     options: CarouselOptions(
                       initialPage: 0,
-                      height: 350,
+                      height: MediaQuery.of(context).size.height,
                       enlargeCenterPage: true,
                       viewportFraction: 0.6,
                       enableInfiniteScroll: false,
                     ),
-                    items: imgList
-                        .map(
-                          (item) => Container(
-                            child: Center(
-                              child: Image.asset(
-                                item,
-                                fit: BoxFit.cover,
-                              ),
+                    items: imgList,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // UPCOMING EVENT AND LIST SLIDESHOW ===>
+          Container(
+            margin: EdgeInsets.only(top: margin_Cards_Vertical),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: margin_Screen_Horizontal),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Upcoming Event",
+                        style: textstyle_Title_CLash_L.copyWith(
+                          color: neutral_100,
+                        ),
+                      ),
+                      SizedBox(width: 4),
+                      Row(
+                        children: [
+                          Text(
+                            "see more",
+                            style: textstyle_Body_Regular.copyWith(
+                              color: primary_Main,
                             ),
                           ),
-                        )
-                        .toList(),
+                          SizedBox(width: 2),
+                          Image.asset(
+                            'assets/icons/icons_arrow_right.png',
+                            width: 20,
+                            height: 20,
+                            color: primary_Main,
+                            fit: BoxFit.contain,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: margin_Cards_Vertical),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Text(
+                        "Upcoming Event",
+                        style: textstyle_Title_CLash_L.copyWith(
+                          color: neutral_100,
+                        ),
+                      ),
+                      Text(
+                        "Upcoming Event",
+                        style: textstyle_Title_CLash_L.copyWith(
+                          color: neutral_100,
+                        ),
+                      ),
+                      Text(
+                        "Upcoming Event",
+                        style: textstyle_Title_CLash_L.copyWith(
+                          color: neutral_100,
+                        ),
+                      ),
+                      Text(
+                        "Upcoming Event",
+                        style: textstyle_Title_CLash_L.copyWith(
+                          color: neutral_100,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
