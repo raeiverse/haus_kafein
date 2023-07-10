@@ -10,6 +10,15 @@ class upcoming_Event_Card extends StatelessWidget {
       margin: EdgeInsets.only(left: margin_Screen_Horizontal),
       width: MediaQuery.of(context).size.width / 1.77,
       height: MediaQuery.of(context).size.height / 6,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: neutral_100.withOpacity(0.15),
+            offset: Offset(0, 5),
+            blurRadius: 15,
+          ),
+        ],
+      ),
       child: Padding(
         padding: EdgeInsets.all(padding_Items_Vertical),
         child: Stack(
