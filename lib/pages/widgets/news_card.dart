@@ -9,7 +9,7 @@ class news_Card extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: margin_Cards_Vertical),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 8.5,
+      height: MediaQuery.of(context).size.height / 8.2,
       decoration: BoxDecoration(
         color: neutral_10,
         borderRadius: BorderRadius.circular(borderRadius_Card),

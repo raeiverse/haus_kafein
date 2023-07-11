@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:haus_kafein/theme.dart';
 
 class custom_Navbar extends StatelessWidget {
-  bool isHome;
-  bool isCafe;
-  bool isMagazine;
-  bool isRecipe;
+  final bool isHome;
+  final bool isCafe;
+  final bool isMagazine;
+  final bool isRecipe;
 
   custom_Navbar({
     required this.isHome,
@@ -44,15 +44,25 @@ class custom_Navbar extends StatelessWidget {
               width: 28,
             ),
           ),
-          Image.asset(
-            'assets/icons/icons_magazine.png',
-            color: this.isMagazine ? primary_Main : neutral_60,
-            width: 28,
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/magazine_Page');
+            },
+            child: Image.asset(
+              'assets/icons/icons_magazine.png',
+              color: this.isMagazine ? primary_Main : neutral_60,
+              width: 28,
+            ),
           ),
-          Image.asset(
-            'assets/icons/icons_recipe.png',
-            color: this.isRecipe ? primary_Main : neutral_60,
-            width: 28,
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/recipe_Page');
+            },
+            child: Image.asset(
+              'assets/icons/icons_recipe.png',
+              color: this.isRecipe ? primary_Main : neutral_60,
+              width: 28,
+            ),
           ),
         ],
       ),

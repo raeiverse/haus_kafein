@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:haus_kafein/pages/widgets/back_Button.dart';
 import 'package:haus_kafein/pages/widgets/cafe_card.dart';
 import 'package:haus_kafein/pages/widgets/custom_navbar.dart';
+import 'package:haus_kafein/pages/widgets/floating_filter.dart';
 import 'package:haus_kafein/pages/widgets/liniear_Background_Images.dart';
 import 'package:haus_kafein/theme.dart';
 
@@ -136,22 +137,45 @@ class cafe_Page extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        cafe_Card(),
-                        cafe_Card(),
+                        cafe_Card(
+                          imageUrl: 'assets/images/images_place_1.png',
+                          title: 'Rivarno Kopi',
+                          desc: 'Coffee, non coffee, non milk, tea based',
+                          rating: 4.8,
+                          location: 8,
+                          open: 11.00,
+                          close: 23.00,
+                        ),
+                        cafe_Card(
+                          imageUrl: 'assets/images/images_place_2.png',
+                          title: 'Cordoneirre',
+                          desc: 'Milk and non milk based',
+                          rating: 4.8,
+                          location: 8,
+                          open: 11.00,
+                          close: 23.00,
+                        ),
                       ],
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
+          SizedBox(height: margin_Screen_Vertical * 9),
         ],
       ),
-      floatingActionButton: custom_Navbar(
-        isHome: false,
-        isCafe: true,
-        isMagazine: false,
-        isRecipe: false,
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          floating_Filter_Button(),
+          custom_Navbar(
+            isHome: false,
+            isCafe: true,
+            isMagazine: false,
+            isRecipe: false,
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
