@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:haus_kafein/theme.dart';
 
 class filter_Card extends StatelessWidget {
-  const filter_Card({super.key});
+  final String imageUrl;
+  final String title;
+  filter_Card({
+    required this.imageUrl,
+    required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +22,11 @@ class filter_Card extends StatelessWidget {
           width: MediaQuery.of(context).size.width / 5,
           height: MediaQuery.of(context).size.height / 12,
           decoration: BoxDecoration(
-            color: primary_Main,
             shape: BoxShape.circle,
+            image: DecorationImage(
+              image: AssetImage(this.imageUrl),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Padding(
@@ -27,7 +35,7 @@ class filter_Card extends StatelessWidget {
             bottom: margin_Screen_Vertical * 2,
           ),
           child: Text(
-            'Chocolate',
+            this.title,
             style: textstyle_Headline_Sub.copyWith(color: neutral_90),
           ),
         ),

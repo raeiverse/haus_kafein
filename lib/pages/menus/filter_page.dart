@@ -45,11 +45,30 @@ class filter_Page extends StatelessWidget {
                 child: Center(
                   child: Wrap(
                     children: [
-                      filter_Card(),
-                      filter_Card(),
-                      filter_Card(),
-                      filter_Card(),
-                      filter_Card(),
+                      filter_Card(
+                        imageUrl: 'assets/icons/icons_snack.png',
+                        title: 'Snack',
+                      ),
+                      filter_Card(
+                        imageUrl: 'assets/icons/icons_snack.png',
+                        title: 'Snack',
+                      ),
+                      filter_Card(
+                        imageUrl: 'assets/icons/icons_snack.png',
+                        title: 'Snack',
+                      ),
+                      filter_Card(
+                        imageUrl: 'assets/icons/icons_snack.png',
+                        title: 'Snack',
+                      ),
+                      filter_Card(
+                        imageUrl: 'assets/icons/icons_snack.png',
+                        title: 'Snack',
+                      ),
+                      filter_Card(
+                        imageUrl: 'assets/icons/icons_snack.png',
+                        title: 'Snack',
+                      ),
                     ],
                   ),
                 ),
@@ -76,13 +95,15 @@ class filter_Page extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  // left: margin_Screen_Horizontal,
+                  left: margin_Screen_Horizontal / 3,
                   right: margin_Screen_Horizontal,
                 ),
                 child: Wrap(
                   children: [
-                    filter_Card(),
-                    filter_Card(),
+                    filter_Card(
+                      imageUrl: 'assets/icons/icons_snack.png',
+                      title: 'Snack',
+                    ),
                   ],
                 ),
               ),
