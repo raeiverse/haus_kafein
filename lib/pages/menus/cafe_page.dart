@@ -23,6 +23,7 @@ class cafe_Page extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   back_Button(),
+                  // TITLES PAGE ===>
                   Padding(
                     padding: EdgeInsets.only(
                       left: margin_Screen_Horizontal,
@@ -37,7 +38,8 @@ class cafe_Page extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(
-                        horizontal: margin_Screen_Horizontal),
+                      horizontal: margin_Screen_Horizontal,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

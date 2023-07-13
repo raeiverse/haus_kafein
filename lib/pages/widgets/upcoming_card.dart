@@ -7,9 +7,9 @@ class upcoming_Event_Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: margin_Screen_Horizontal),
-      width: MediaQuery.of(context).size.width / 1.77,
-      height: MediaQuery.of(context).size.height / 6,
+      margin: EdgeInsets.only(left: margin_Cards_Horizontal),
+      width: MediaQuery.of(context).size.width / 1.6,
+      height: MediaQuery.of(context).size.height / 4.5,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -40,7 +40,7 @@ class upcoming_Event_Card extends StatelessWidget {
               width: MediaQuery.of(context).size.width / 1.77 / 7,
               height: MediaQuery.of(context).size.height / 6 / 3,
               decoration: BoxDecoration(
-                color: primary_Main.withOpacity(0.6),
+                color: primary_Main,
                 borderRadius: BorderRadius.circular(borderRadius_Card),
               ),
               child: Column(
@@ -65,20 +65,31 @@ class upcoming_Event_Card extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 6 / 1.9,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.vertical(
+                    bottom: Radius.circular(borderRadius_Card),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: neutral_100.withOpacity(0.6),
+                      blurRadius: 20,
+                      blurStyle: BlurStyle.solid,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
                 margin: EdgeInsets.symmetric(
                   horizontal: padding_Items_Horizontal,
                   vertical: padding_Items_Vertical,
                 ),
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 6 / 2.25,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: neutral_100.withOpacity(0.6),
-                      blurRadius: 7,
-                    ),
-                  ],
-                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -94,7 +105,7 @@ class upcoming_Event_Card extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Cafe bergaya modern industrial di kawasan Batu, mempertemukan modernitas dengan alam. Selain kopi, cafe ini juga menyediakan tanaman hias dan pemandangan yang indah',
-                        style: textstyle_Body_Regular.copyWith(
+                        style: textstyle_Caption_Regular.copyWith(
                           color: neutral_10,
                         ),
                       ),

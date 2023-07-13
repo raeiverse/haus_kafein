@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:haus_kafein/pages/menus/cafe_page.dart';
 import 'package:haus_kafein/pages/menus/home_page.dart';
 import 'package:haus_kafein/pages/menus/magazine_page.dart';
+import 'package:haus_kafein/pages/menus/filter_page.dart';
 import 'package:haus_kafein/pages/menus/recipe_page.dart';
 import 'package:haus_kafein/pages/splash_screen/splash_screen1.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/cafe_Page': (context) => cafe_Page(),
         '/magazine_Page': (context) => magazine_Page(),
         '/recipe_Page': (context) => recipe_Page(),
+        '/filter_Page': (context) => filter_Page(),
       },
     );
   }

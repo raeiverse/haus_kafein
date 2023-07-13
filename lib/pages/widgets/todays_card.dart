@@ -8,7 +8,7 @@ class todays_Card extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       transform: Matrix4.translationValues(
-          -MediaQuery.of(context).size.width / 7.7, 0, 0),
+          -MediaQuery.of(context).size.width / 6.8, 0, 0),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
