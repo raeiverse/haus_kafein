@@ -11,101 +11,147 @@ class filter_Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: background_Colors,
-      body: Stack(
+      body: ListView(
+        padding: EdgeInsets.zero,
         children: [
-          liniear_Background_Image(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Stack(
             children: [
-              SizedBox(height: margin_Screen_Vertical * 2),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              liniear_Background_Image(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // BEVERAGES SECTION ===>
-                  Padding(
-                    padding: EdgeInsets.only(left: margin_Screen_Horizontal),
-                    child: Text(
-                      "Beverages",
-                      style: textstyle_Title_CLash_L.copyWith(
-                        color: neutral_100,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: margin_Screen_Horizontal),
-                    child: close_Button(),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  // left: margin_Screen_Horizontal,
-                  right: margin_Screen_Horizontal,
-                ),
-                child: Center(
-                  child: Wrap(
+                  SizedBox(height: margin_Screen_Vertical * 2),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      filter_Card(
-                        imageUrl: 'assets/icons/icons_snack.png',
-                        title: 'Snack',
+                      // BEVERAGES SECTION ===>
+                      Padding(
+                        padding:
+                            EdgeInsets.only(left: margin_Screen_Horizontal),
+                        child: Text(
+                          "Beverages",
+                          style: textstyle_Title_CLash_L.copyWith(
+                            color: neutral_100,
+                          ),
+                        ),
                       ),
-                      filter_Card(
-                        imageUrl: 'assets/icons/icons_snack.png',
-                        title: 'Snack',
-                      ),
-                      filter_Card(
-                        imageUrl: 'assets/icons/icons_snack.png',
-                        title: 'Snack',
-                      ),
-                      filter_Card(
-                        imageUrl: 'assets/icons/icons_snack.png',
-                        title: 'Snack',
-                      ),
-                      filter_Card(
-                        imageUrl: 'assets/icons/icons_snack.png',
-                        title: 'Snack',
-                      ),
-                      filter_Card(
-                        imageUrl: 'assets/icons/icons_snack.png',
-                        title: 'Snack',
+                      Padding(
+                        padding:
+                            EdgeInsets.only(right: margin_Screen_Horizontal),
+                        child: close_Button(),
                       ),
                     ],
                   ),
-                ),
-              ),
-              SizedBox(height: margin_Screen_Vertical * 2),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // FOOD SECTION ===>
                   Padding(
-                    padding: EdgeInsets.only(left: margin_Screen_Horizontal),
-                    child: Text(
-                      "FOOD",
-                      style: textstyle_Title_CLash_L.copyWith(
-                        color: neutral_100,
+                    padding: EdgeInsets.only(
+                      // left: margin_Screen_Horizontal,
+                      right: margin_Screen_Horizontal,
+                    ),
+                    child: Center(
+                      child: Wrap(
+                        children: [
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_coffee.png',
+                            title: 'Coffee',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_tea.png',
+                            title: 'Tea',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_milk.png',
+                            title: 'Milk Based',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_boba.png',
+                            title: 'Boba',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_yogurt.png',
+                            title: 'Yogurt',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_ice.png',
+                            title: 'Ice Cream',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_smoothies.png',
+                            title: 'Smoothies',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_chocolate.png',
+                            title: 'Chocolate',
+                          ),
+                          filter_Card(
+                            imageUrl: 'assets/icons/icons_soft.png',
+                            title: 'Ice Cream',
+                          ),
+                        ],
                       ),
                     ),
                   ),
+                  SizedBox(height: margin_Screen_Vertical * 2),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // FOOD SECTION ===>
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: margin_Screen_Horizontal,
+                          bottom: margin_Screen_Vertical,
+                        ),
+                        child: Text(
+                          "FOOD",
+                          style: textstyle_Title_CLash_L.copyWith(
+                            color: neutral_100,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   Padding(
-                    padding: EdgeInsets.only(right: margin_Screen_Horizontal),
-                    child: close_Button(),
+                    padding: EdgeInsets.only(
+                      left: margin_Screen_Horizontal / 3,
+                      right: margin_Screen_Horizontal,
+                    ),
+                    child: Wrap(
+                      children: [
+                        filter_Card(
+                          imageUrl: 'assets/icons/icons_snack.png',
+                          title: 'Snack',
+                        ),
+                        filter_Card(
+                          imageUrl: 'assets/icons/icons_main.png',
+                          title: 'Main Course',
+                        ),
+                      ],
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: margin_Screen_Vertical,
+                        bottom: margin_Screen_Vertical * 3,
+                      ),
+                      width: MediaQuery.of(context).size.width -
+                          (margin_Screen_Horizontal * 3),
+                      height: MediaQuery.of(context).size.height / 13,
+                      decoration: BoxDecoration(
+                        color: primary_Main,
+                        borderRadius:
+                            BorderRadius.circular(borderRadius_Fullsize_Button),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Apply Filter',
+                          style: textstyle_Title_S.copyWith(
+                            color: neutral_10,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: margin_Screen_Horizontal / 3,
-                  right: margin_Screen_Horizontal,
-                ),
-                child: Wrap(
-                  children: [
-                    filter_Card(
-                      imageUrl: 'assets/icons/icons_snack.png',
-                      title: 'Snack',
-                    ),
-                  ],
-                ),
               ),
             ],
           ),

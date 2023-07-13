@@ -25,7 +25,7 @@ class filter_Card extends StatelessWidget {
             shape: BoxShape.circle,
             image: DecorationImage(
               image: AssetImage(this.imageUrl),
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
             ),
           ),
         ),

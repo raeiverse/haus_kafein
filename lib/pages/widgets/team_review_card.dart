@@ -9,7 +9,7 @@ class team_Review_Card extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: margin_Screen_Horizontal),
       width: MediaQuery.of(context).size.width / 1.54,
-      height: MediaQuery.of(context).size.height / 3.5,
+      height: MediaQuery.of(context).size.height / 3.4,
       decoration: BoxDecoration(
         color: neutral_10,
         borderRadius: BorderRadius.circular(
@@ -28,23 +28,24 @@ class team_Review_Card extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width / 1.54,
-            height: MediaQuery.of(context).size.height / 3.6 / 1.7,
+            height: MediaQuery.of(context).size.height / 3.5 / 1.8,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(
-                    borderRadius_Card,
-                  ),
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(
+                  borderRadius_Card,
                 ),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/images_event_1.png'),
-                  fit: BoxFit.cover,
-                )),
+              ),
+              image: DecorationImage(
+                image: AssetImage('assets/images/images_event_1.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Padding(
             padding: EdgeInsets.all(padding_Items_Horizontal),
             child: Container(
               width: MediaQuery.of(context).size.width / 1.14 / 1.6,
-              height: MediaQuery.of(context).size.height / 3.3 / 3,
+              height: MediaQuery.of(context).size.height / 3.24 / 2.8,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

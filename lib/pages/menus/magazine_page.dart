@@ -16,6 +16,7 @@ class magazine_Page extends StatelessWidget {
     return Scaffold(
       backgroundColor: background_Colors,
       body: ListView(
+        padding: EdgeInsets.zero,
         scrollDirection: Axis.vertical,
         children: [
           Stack(
@@ -24,6 +25,7 @@ class magazine_Page extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: margin_Screen_Vertical * 2),
                   back_Button(),
                   // TEAM REVIEW SECTION ===>
                   Padding(
@@ -39,7 +41,7 @@ class magazine_Page extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height / 3.3,
+                    height: MediaQuery.of(context).size.height / 3.2,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Padding(

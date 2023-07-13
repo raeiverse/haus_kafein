@@ -14,6 +14,7 @@ class cafe_Page extends StatelessWidget {
     return Scaffold(
       backgroundColor: background_Colors,
       body: ListView(
+        padding: EdgeInsets.zero,
         scrollDirection: Axis.vertical,
         children: [
           Stack(
@@ -22,6 +23,7 @@ class cafe_Page extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: margin_Screen_Vertical * 2),
                   back_Button(),
                   // TITLES PAGE ===>
                   Padding(

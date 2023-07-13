@@ -27,6 +27,7 @@ class _home_PageState extends State<home_Page> {
     return Scaffold(
       backgroundColor: background_Colors,
       body: ListView(
+        padding: EdgeInsetsDirectional.zero,
         scrollDirection: Axis.vertical,
         children: [
           // HELLO AND CITY ===>
@@ -37,6 +38,7 @@ class _home_PageState extends State<home_Page> {
             ),
             child: Column(
               children: [
+                SizedBox(height: margin_Screen_Vertical * 2),
                 Row(
                   children: [
                     Text(
