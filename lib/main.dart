@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:haus_kafein/pages/menus/cafe_page.dart';
-import 'package:haus_kafein/pages/menus/cafe_profile.page.dart';
+import 'package:haus_kafein/pages/menus/cafe_profile_page.dart';
 import 'package:haus_kafein/pages/menus/home_page.dart';
 import 'package:haus_kafein/pages/menus/magazine_page.dart';
 import 'package:haus_kafein/pages/menus/filter_page.dart';
 import 'package:haus_kafein/pages/menus/recipe_page.dart';
 import 'package:haus_kafein/pages/splash_screen/splash_screen1.dart';
+import 'package:haus_kafein/pages/menus/magazine_Event_Page.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/recipe_Page': (context) => recipe_Page(),
         '/filter_Page': (context) => filter_Page(),
         '/cafe_Profile_Page': (context) => cafe_Profile_Page(),
+        '/magazine_Event_Page': (context) => magazine_Event_Page(),
       },
     );
   }

@@ -137,23 +137,28 @@ class _home_PageState extends State<home_Page> {
                         ),
                       ),
                       SizedBox(width: 4),
-                      Row(
-                        children: [
-                          Text(
-                            "see more",
-                            style: textstyle_Body_Regular.copyWith(
-                              color: primary_Main,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/magazine_Event_Page');
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              "see more",
+                              style: textstyle_Body_Regular.copyWith(
+                                color: primary_Main,
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 2),
-                          Image.asset(
-                            'assets/icons/icons_arrow_right.png',
-                            width: 20,
-                            height: 20,
-                            color: primary_Main,
-                            fit: BoxFit.contain,
-                          ),
-                        ],
+                            SizedBox(width: 2),
+                            Image.asset(
+                              'assets/icons/icons_arrow_right.png',
+                              width: 20,
+                              height: 20,
+                              color: primary_Main,
+                              fit: BoxFit.contain,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
