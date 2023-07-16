@@ -5,8 +5,8 @@ import '../widgets/back_Button.dart';
 import '../widgets/liniear_Background_Images.dart';
 import '../widgets/magazine_card.dart';
 
-class magazine_News_Card extends StatelessWidget {
-  const magazine_News_Card({super.key});
+class magazine_News_Page extends StatelessWidget {
+  const magazine_News_Page({super.key});
 
   @override
   Widget build(BuildContext context) {

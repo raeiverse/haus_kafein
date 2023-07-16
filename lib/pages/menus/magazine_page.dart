@@ -117,28 +117,34 @@ class magazine_Page extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "News",
+                          "Upcoming Event",
                           style: textstyle_Title_CLash_L.copyWith(
                             color: neutral_100,
                           ),
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "see more",
-                              style: textstyle_Body_Regular.copyWith(
-                                color: primary_Main,
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, '/magazine_Event_Page');
+                          },
+                          child: Row(
+                            children: [
+                              Text(
+                                "see more",
+                                style: textstyle_Body_Regular.copyWith(
+                                  color: primary_Main,
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 2),
-                            Image.asset(
-                              'assets/icons/icons_arrow_right.png',
-                              width: 20,
-                              height: 20,
-                              color: primary_Main,
-                              fit: BoxFit.contain,
-                            ),
-                          ],
+                              SizedBox(width: 2),
+                              Image.asset(
+                                'assets/icons/icons_arrow_right.png',
+                                width: 20,
+                                height: 20,
+                                color: primary_Main,
+                                fit: BoxFit.contain,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -169,23 +175,28 @@ class magazine_Page extends StatelessWidget {
                             color: neutral_100,
                           ),
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              "see more",
-                              style: textstyle_Body_Regular.copyWith(
-                                color: primary_Main,
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/magazine_News_Page');
+                          },
+                          child: Row(
+                            children: [
+                              Text(
+                                "see more",
+                                style: textstyle_Body_Regular.copyWith(
+                                  color: primary_Main,
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 2),
-                            Image.asset(
-                              'assets/icons/icons_arrow_right.png',
-                              width: 20,
-                              height: 20,
-                              color: primary_Main,
-                              fit: BoxFit.contain,
-                            ),
-                          ],
+                              SizedBox(width: 2),
+                              Image.asset(
+                                'assets/icons/icons_arrow_right.png',
+                                width: 20,
+                                height: 20,
+                                color: primary_Main,
+                                fit: BoxFit.contain,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

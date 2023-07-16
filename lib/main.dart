@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:haus_kafein/pages/menus/cafe_page.dart';
 import 'package:haus_kafein/pages/menus/cafe_profile_page.dart';
 import 'package:haus_kafein/pages/menus/home_page.dart';
+import 'package:haus_kafein/pages/menus/magazine_event_article_page.dart';
+import 'package:haus_kafein/pages/menus/magazine_news_page.dart';
 import 'package:haus_kafein/pages/menus/magazine_page.dart';
 import 'package:haus_kafein/pages/menus/filter_page.dart';
 import 'package:haus_kafein/pages/menus/recipe_page.dart';
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
         '/filter_Page': (context) => filter_Page(),
         '/cafe_Profile_Page': (context) => cafe_Profile_Page(),
         '/magazine_Event_Page': (context) => magazine_Event_Page(),
+        '/magazine_Event_Article_Page': (context) =>
+            magazine_Event_Article_Page(),
+        '/magazine_News_Page': (context) => magazine_News_Page(),
       },
     );
   }

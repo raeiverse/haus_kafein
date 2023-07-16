@@ -11,14 +11,14 @@ class upcoming_Event_Card extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 1.6,
       height: MediaQuery.of(context).size.height / 4.5,
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: neutral_100.withOpacity(0.15),
-            offset: Offset(0, 5),
-            blurRadius: 15,
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: neutral_100.withOpacity(0.15),
+          //     offset: Offset(0, 5),
+          //     blurRadius: 15,
+          //   ),
+          // ],
           ),
-        ],
-      ),
       child: Padding(
         padding: EdgeInsets.all(padding_Items_Vertical),
         child: Stack(
@@ -71,13 +71,6 @@ class upcoming_Event_Card extends StatelessWidget {
                   borderRadius: BorderRadius.vertical(
                     bottom: Radius.circular(borderRadius_Card),
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: neutral_100.withOpacity(0.6),
-                      blurRadius: 20,
-                      blurStyle: BlurStyle.solid,
-                    ),
-                  ],
                 ),
               ),
             ),

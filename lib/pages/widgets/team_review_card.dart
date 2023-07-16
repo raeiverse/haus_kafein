@@ -18,7 +18,10 @@ class team_Review_Card extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: neutral_100.withOpacity(0.15),
-            offset: Offset(0, 5),
+            offset: Offset(
+              0,
+              5,
+            ),
             blurRadius: 15,
           ),
         ],

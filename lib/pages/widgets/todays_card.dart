@@ -14,14 +14,14 @@ class todays_Card extends StatelessWidget {
         transform: Matrix4.translationValues(
             -MediaQuery.of(context).size.width / 6.8, 0, 0),
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: neutral_100.withOpacity(0.15),
-              offset: Offset(0, 5),
-              blurRadius: 15,
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: neutral_100.withOpacity(0.15),
+            //     offset: Offset(0, 5),
+            //     blurRadius: 15,
+            //   ),
+            // ],
             ),
-          ],
-        ),
         child: Padding(
           padding: EdgeInsets.all(padding_Items_Horizontal),
           child: ClipRRect(

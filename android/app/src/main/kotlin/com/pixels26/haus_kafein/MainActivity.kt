@@ -1,4 +1,4 @@
-package com.example.haus_kafein
+package com.pixels26.haus_kafein
 
 import io.flutter.embedding.android.FlutterActivity
 

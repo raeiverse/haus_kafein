@@ -19,6 +19,13 @@ class _floating_Search_ButtonState extends State<floating_Search_Button> {
       width: MediaQuery.of(context).size.width / 2,
       decoration: BoxDecoration(
         color: transparant_Colors,
+        borderRadius: BorderRadius.circular(borderRadius_Fullsize_Button),
+        boxShadow: [
+          BoxShadow(
+            color: neutral_10.withOpacity(0.5),
+            blurRadius: 4.0,
+          ),
+        ],
       ),
       child: Padding(
         padding: EdgeInsets.all(padding_Items_Horizontal / 3),
